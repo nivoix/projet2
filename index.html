@@ -8,33 +8,30 @@
     <title>booki</title>
 </head>
     <header>
-        <div class="tête">
-            <nav>
-                <img src="images/logo/Booki@3x.png" alt="nom du site">
-                    <ul>
-                        <li class="Hébergements"> 
-                        <a  href="#Hébergements" ></a> Hébergements
-                        </li>
-                        <li class="Activités">
-                        <a href="#Activités" ></a> Activités
-                        </li>
-                    </ul>
-            </nav>
-        </div>
-        <main>
-            <h2>Trouver votre hébergement pour vos vacances de rêve</h2>
+        <nav>
+            <img src="images/logo/Booki@3x.png" alt="nom du site">
+                <ul>
+                    <li> 
+                        <a  href="#Hebergements" >Hébergements</a> 
+                    </li>
+                    <li>
+                        <a href="#Activites" >Activités</a> 
+                    </li>
+                </ul>
+        </nav>
+        <section classe="title">
+            <h1>Trouver votre hébergement pour vos vacances de rêve</h1>
             <p>En plein centre ville ou en pleine nature</p>            
-        </main>
-        <br>
+        </section>
         <div class="search">
-                <div class="icone"><i class="fa-solid fa-location-dot"></i>
-                </div>
+            <div class="icone"><i class="fa-solid fa-location-dot"></i>
+            </div>
             <div class="ville">
-                    <form method="post" action="traitement.php">
+                <form method="post">
                     <p><input id="searchbar" type="text" name="ville" placeholder="Marseille,france"/></p>
-                    </form>
+                </form>
             </div> 
-            <div class="recherche">rechercher
+            <div class="recherche">rechercher 
             </div>      
         </div>
         <div class="filtres">
@@ -45,11 +42,11 @@
                 <li class="coeur"><i class="fa-solid fa-heart" id=coeur></i>Romantique</li>
                 <li class="chien"><i class="fa-sharp fa-solid fa-dog" id=chien></i>Animaux autorisés</li>
             </ol>
-            <br>
             <div class="info">
-                <div class="i"><i class="fas fa-info searchResultWrapiconIcon" aria-hidden="true"></i></div>
-                    <p> Plus de 500 logements sont disponibles dans cette ville.
-                    </p>
+                <div class="i"><i class="fas fa-info searchResultWrapiconIcon" aria-hidden="true"></i>
+                </div>
+                <p> Plus de 500 logements sont disponibles dans cette ville.
+                </p>
             </div>  
         </div> 
     </header>

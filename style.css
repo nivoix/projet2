@@ -39,7 +39,11 @@ li{/* mise en page des raccourcis*/
     display: flex;
     height: 45px;
     align-items: flex-end;
-    justify-content: space-around;
+    justify-content: space-around; 
+}
+a {
+  color: #0065fc;
+    text-decoration: none;
 }
 ul li:hover{ /* dynamique des raccourcis*/
   border-top: 3px solid #0065fc;
@@ -116,6 +120,9 @@ ul li:hover{ /* dynamique des raccourcis*/
     justify-content: center;
     color: white;
   }
+  .recherche:hover{
+    cursor: pointer;
+  }
 ol{
   display: flex;
   align-items: flex-start;
@@ -128,6 +135,7 @@ ol{
 li.filtres,li.billet, li.corps, li.coeur, li.chien{
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding-right: 20px;
   height: 45px;
   width: auto;
