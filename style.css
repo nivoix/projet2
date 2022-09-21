@@ -11,13 +11,13 @@ body{/* cadrage de la page*/
 header{
   display: flex;
   flex-direction: column;
-  align-content: space-between;
+  align-content: space-between;  
 }
 nav{ /* positionnement du header*/
     display: flex;
     width: 100%;
     height: 100px;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
 }
@@ -148,29 +148,24 @@ form{ /* paramètre du bloc de saisie ville*/
   padding-top: 15px;
   display: none;
 }
-.filtres{
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  align-content: space-around;
-  flex-wrap: wrap;
-  height: auto;
-  max-width: 990px;
-  margin-top: 20px;
-}
 h3{
   padding-right: 10px;
-  margin-top: 0px;
+  margin-top: 25px;
   margin-bottom: 1px;
+  font-weight: 900;
 }
 ol{
   display: flex;
-  width: 90%;
+  flex-wrap: wrap;
   align-items: flex-start;
-  justify-content: flex-start;
-  padding-left: 100px;
-  height: auto;
+  padding-left: 30px;
   margin-top: 0px;
+}
+.filtres{
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-start;
+  margin-top: 10px;
 }
 li.billet, li.corps, li.coeur, li.chien{
   display: flex;
@@ -180,9 +175,24 @@ li.billet, li.corps, li.coeur, li.chien{
   margin-top: 15px;
   padding-right: 15px;
   height: 45px;
-  width: auto;
   border: 2px solid #F2F2F2;
   border-radius: 45px 45px 45px 45px;
+  font-weight: 900;
+}
+li.chien{
+  flex-wrap:nowrap;
+  width: 214px;
+}
+li.billet, li.coeur{
+  width: 169px;
+}
+li.corps{
+  width: 133px;
+}
+.regroupfiltre{
+  display: flex;
+  justify-content: flex-start;
+flex-direction: row;
 }
 #billet,#corps,#coeur,#chien{
   display: flex;
@@ -209,9 +219,11 @@ li.billet, li.corps, li.coeur, li.chien{
   align-items: center;
   justify-content: center;
   border: 4px solid #F2F2F2;
+  margin-right: 5px;
   border-radius: 50%;
     height: 35px;
     width: 35px; 
+}
 @media screen and (max-width: 992px) {
   .button{
     display: none;
@@ -224,12 +236,7 @@ li.billet, li.corps, li.coeur, li.chien{
     display: block;
     align-content: flex-start;
     flex-wrap: wrap;
-  }
-  
-}
-
- 
-}
+  } 
 .héberg-popul{
   display: flex;
   justify-content: space-between;
