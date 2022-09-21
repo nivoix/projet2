@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;600&amp;display=swap'">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/6aa97794ec.js" crossorigin="anonymous"></script>
     <title>booki</title>
@@ -20,27 +22,25 @@
                 </ul>
         </nav>
         <section classe="title">
-            <h1>Trouver votre hébergement pour vos vacances de rêve</h1>
+            <h1>Trouver votre hébergement pour des vacances de rêve</h1>
             <p>En plein centre ville ou en pleine nature</p>            
         </section>
         <div class="search">
-            <div class="icone"><i class="fa-solid fa-location-dot"></i>
-            </div>
-            <div class="ville">
-                <form method="post">
-                    <p><input id="searchbar" type="text" name="ville" placeholder="Marseille,france"/></p>
-                </form>
-            </div> 
-            <div class="recherche">rechercher 
-            </div>      
+            <i class="fa-solid fa-location-dot"></i>
+            <form method="post">
+                <input type="search" name="villes" class="ville" placeholder="Marseille, France">
+                <input type="submit" class="button" value="Rechercher" disabled="disabled">      
+                <i class="fa-solid fa-magnifying-glass">
+                <input type="submit" class="button_mobile" value=" "></i>
+            </form>
         </div>
         <div class="filtres">
+            <h3>Filtres</h3>    
             <ol>
-                <li class="filtres"><h5>Filtres</h5></li>
-                <li class="billet"><i class="fa-solid fa-money-bill-wave" id=billet></i>Economique</li>
-                <li class="corps"><i class="fa-solid fa-child-reaching" id=corps></i>Familial</li>
-                <li class="coeur"><i class="fa-solid fa-heart" id=coeur></i>Romantique</li>
-                <li class="chien"><i class="fa-sharp fa-solid fa-dog" id=chien></i>Animaux autorisés</li>
+                <li class="billet"><i class="fa-solid fa-money-bill-wave" id=billet></i><h3>Economique</h3></li>
+                <li class="corps"><i class="fa-solid fa-child-reaching" id=corps></i><h3>Familial</h3></li>
+                <li class="coeur"><i class="fa-solid fa-heart" id=coeur></i><h3>Romantique</h3></li>
+                <li class="chien"><i class="fa-sharp fa-solid fa-dog" id=chien></i><h3>Animaux autorisés</h3></li>
             </ol>
             <div class="info">
                 <div class="i"><i class="fas fa-info searchResultWrapiconIcon" aria-hidden="true"></i>
