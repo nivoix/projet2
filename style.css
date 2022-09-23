@@ -7,6 +7,8 @@
 body{/* cadrage de la page*/
     margin: 40px;
     margin-top: 0px;
+    width: 1440px;
+    height: 1884px;
 }
 header{
   display: flex;
@@ -241,33 +243,35 @@ li.corps{
     align-content: flex-start;
     flex-wrap: wrap;
   } 
-.héberg-popul{
+}
+.heberg-popul{
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
   height: auto;
   }
-}
-.card{
-  width: 900px;
-  height: 630px;
+.card-heberg{
+  width: 880px;
+  height: 626px;
   background-color: #F2F2F2;
   box-shadow: 0 5px 20px #999;
-  border-radius: 15px;
+  border-radius: 20px;
 }
 .card-cannebiere{
   display: block;
-  width: 230px;
-  height: 190px;
+  width: 246px;
+  height: 199px;
   background-color: white;
   box-shadow: 0 5px 20px #999;
-  border-radius: 15px;
-  margin-left: 10px;
+  border-radius: 20px;
+  margin-left: 40px;
+  margin-top: 23px;
 }
 .card-cannebiere:hover {
-  width: 240px;
-  height: 200px;
+  width: 250px;
+  height: 205px;
+  cursor: pointer;
 }
 .card-image{
   height: 100%;
@@ -277,7 +281,7 @@ li.corps{
   left: 5px;
   overflow: hidden;
   margin-left: 0;
-  border-radius:15px 15px 0 0;
+  border-radius:20px 20px 0 0;
 }
 .card-image img{
   width: 100%;
@@ -288,13 +292,57 @@ li.corps{
 }
 .card-body{
   position: absolute;
-  bottom: 10%;
+  bottom: 12px;
   left: 0;
 }
-h2{
-  font-weight: 900;
-  padding-top: 30px;
+.card-populaires{
+  width: 420px;
+  height: 625px;
+  background-color: #F2F2F2;
+  box-shadow: 0 5px 20px #999;
+  border-radius: 20px;
+  margin-right: 40px;
 }
-h4{
+.card-soleil-matin{
+  display: block;
+  position: relative;
+  width: 343px;
+  height: 144px;
+  background-color: white;
+  box-shadow: 0 5px 20px #999;
+  border-radius: 20px;
+  margin-left: 41px;
+  margin-top: 37px;
+}
+.card-soleil-matin:hover{
+width: 348px;
+height: 150px;
+cursor: pointer;
+}
+.card-image-pop{
+  height: 92%;
+  width: 95%;
+  position: relative;
+  top: 5px;
+  left: 5px;
+  bottom: 5px;
+  overflow: hidden;
+  margin-left: 0;
+  border-radius:20px 20px 0 0;
+}
+.card-image-pop img{
+  width: 40%;
+  height: 100%;
+  border-radius: 20px 0 0 20px;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+}
+.card-heberg h2 .card-populaires h2{
+  font-weight: 900;
+  padding-top: 42px;
+  padding-left: 40px;
+}
+.card-cannebiere h4{
   margin: 0;
 }
