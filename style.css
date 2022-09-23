@@ -143,7 +143,7 @@ form{ /* paramètre du bloc de saisie ville*/
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: -20%;
+  margin-left: -18%;
   padding-left: 15px;
   padding-top: 15px;
   display: none;
@@ -175,9 +175,13 @@ li.billet, li.corps, li.coeur, li.chien{
   margin-top: 15px;
   padding-right: 15px;
   height: 45px;
-  border: 2px solid #F2F2F2;
+  border-top: 2px solid #F2F2F2;
+  border-right: 2px solid #F2F2F2;
   border-radius: 45px 45px 45px 45px;
   font-weight: 900;
+}
+li.billet:hover, li.corps:hover, li.coeur:hover, li.chien:hover{
+  cursor: pointer;background-color: #F2F2F2;
 }
 li.chien{
   flex-wrap:nowrap;
@@ -192,7 +196,7 @@ li.corps{
 .regroupfiltre{
   display: flex;
   justify-content: flex-start;
-flex-direction: row;
+  flex-direction: row;
 }
 #billet,#corps,#coeur,#chien{
   display: flex;
@@ -243,4 +247,54 @@ flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
   height: auto;
+  }
+}
+.card{
+  width: 900px;
+  height: 630px;
+  background-color: #F2F2F2;
+  box-shadow: 0 5px 20px #999;
+  border-radius: 15px;
+}
+.card-cannebiere{
+  display: block;
+  width: 230px;
+  height: 190px;
+  background-color: white;
+  box-shadow: 0 5px 20px #999;
+  border-radius: 15px;
+  margin-left: 10px;
+}
+.card-cannebiere:hover {
+  width: 240px;
+  height: 200px;
+}
+.card-image{
+  height: 100%;
+  width: 95%;
+  position: relative;
+  top: 5px;
+  left: 5px;
+  overflow: hidden;
+  margin-left: 0;
+  border-radius:15px 15px 0 0;
+}
+.card-image img{
+  width: 100%;
+  height: 60%;
+  position: absolute;
+  top:0%;
+  left:0%;
+}
+.card-body{
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+}
+h2{
+  font-weight: 900;
+  padding-top: 30px;
+}
+h4{
+  margin: 0;
 }
