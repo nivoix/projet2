@@ -290,10 +290,11 @@ li.corps{
   top:0%;
   left:0%;
 }
-.card-body{
+.card-body-heberg{
   position: absolute;
-  bottom: 12px;
-  left: 0;
+  background-color: #FFFFFF;
+  top: 123px;
+  left: 11px;
 }
 .card-populaires{
   width: 420px;
@@ -338,11 +339,43 @@ cursor: pointer;
   top: 0%;
   left: 0%;
 }
-.card-heberg h2 .card-populaires h2{
+.card-body-pop{
+  position: absolute;
+  background-color: #FFFFFF;
+  top: 11px;
+  left: 147px;
+}
+.card-heberg h2 {
   font-weight: 900;
+  margin: 0;
   padding-top: 42px;
   padding-left: 40px;
 }
+.card-populaires h2{
+  font-weight: 900;
+  margin: 0;
+  padding-top: 41px;
+  padding-left: 37px;
 .card-cannebiere h4{
   margin: 0;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+}
+.card-populaires h4{
+  margin: 0;
+  padding-top: 0;
+  width: 169px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+}
+span{
+  font-weight: 900;
+}
+.card-prix-heberg{
+  padding-top: 9px;
+}
+.card-prix-pop{
+  padding-top: 7px;
 }
