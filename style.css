@@ -7,8 +7,8 @@
 body{/* cadrage de la page*/
     margin: 40px;
     margin-top: 0px;
-    width: 1440px;
-    height: 1884px;
+    max-width: 1440px;
+    max-height: 1884px;
 }
 header{
   display: flex;
@@ -132,7 +132,7 @@ form{ /* paramètre du bloc de saisie ville*/
   .fa-magnifying-glass:before, .fa-search:before {/*icone de loupe*/
     content: "\f002";
 }
-  .button_mobile, .fa-magnifying-glass{
+  .button_mobile, .fa-magnifying-glass{/*bouton de la barre de recherche*/
   width: 50px;
   border-radius: 12px;
   background-color: #0065FC;
@@ -150,7 +150,7 @@ form{ /* paramètre du bloc de saisie ville*/
   padding-top: 15px;
   display: none;
 }
-h3{
+h3{/*positionnement du titre filtres*/
   padding-right: 10px;
   margin-top: 25px;
   margin-bottom: 1px;
@@ -244,7 +244,7 @@ li.corps{
     flex-wrap: wrap;
   } 
 }
-.heberg-popul{
+main{
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -252,76 +252,120 @@ li.corps{
   height: auto;
   }
 .card-heberg{
-  width: 880px;
-  height: 626px;
+  max-width: 880px;
+  min-height: 626px;
   background-color: #F2F2F2;
   box-shadow: 0 5px 20px #999;
   border-radius: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 30px;
+}
+.card-heberg h2 {
+  font-weight: 900;
+  margin: 0;
+  padding-top: 42px;
+  padding-left: 40px;
+}
+.cardheberg{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 .card-cannebiere{
-  display: block;
   width: 246px;
   height: 199px;
   background-color: white;
   box-shadow: 0 5px 20px #999;
   border-radius: 20px;
-  margin-left: 40px;
   margin-top: 23px;
 }
 .card-cannebiere:hover {
-  width: 250px;
-  height: 205px;
   cursor: pointer;
+  transform: scale(1.25);
 }
-.card-image{
+.card-image-heberg{
   height: 100%;
   width: 95%;
   position: relative;
   top: 5px;
   left: 5px;
-  overflow: hidden;
-  margin-left: 0;
+  right: 5px;
   border-radius:20px 20px 0 0;
 }
-.card-image img{
+.card-image-heberg img{
   width: 100%;
   height: 60%;
-  position: absolute;
-  top:0%;
-  left:0%;
+  border-radius: 20px 20px 0 0 ;
+  object-fit: cover;
 }
 .card-body-heberg{
   position: absolute;
   background-color: #FFFFFF;
   top: 123px;
   left: 11px;
+  bottom: 11px;
+  right: auto;
+}
+.card-cannebiere h4{
+  margin: 0;
+  position: relative;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  top: 4px;
+}
+.card-prix-heberg{
+  top: 9px;
+  position: relative;
+}
+.card-etoile-heberg{
+  position: relative;
+  top: 9px;
 }
 .card-populaires{
-  width: 420px;
+  max-width: 420px;
   height: 625px;
   background-color: #F2F2F2;
   box-shadow: 0 5px 20px #999;
   border-radius: 20px;
   margin-right: 40px;
 }
+.card-populaires h2{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-weight: 900;
+  margin: 0;
+  padding-top: 41px;
+  padding-left: 37px;
+  padding-right: 37px;
+}
+.cardpop{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 37px;
+  padding-right: 40px;  
+}
 .card-soleil-matin{
   display: block;
-  position: relative;
   width: 343px;
   height: 144px;
   background-color: white;
   box-shadow: 0 5px 20px #999;
   border-radius: 20px;
-  margin-left: 41px;
-  margin-top: 37px;
+  margin-top: 26px;
 }
 .card-soleil-matin:hover{
-width: 348px;
-height: 150px;
 cursor: pointer;
+transform: scale(1.25);
 }
 .card-image-pop{
-  height: 92%;
+  
+  height: 94%;
   width: 95%;
   position: relative;
   top: 5px;
@@ -336,46 +380,39 @@ cursor: pointer;
   height: 100%;
   border-radius: 20px 0 0 20px;
   position: absolute;
-  top: 0%;
-  left: 0%;
+  object-fit: cover;
 }
 .card-body-pop{
   position: absolute;
   background-color: #FFFFFF;
-  top: 11px;
+  top: 0;
   left: 147px;
 }
-.card-heberg h2 {
-  font-weight: 900;
-  margin: 0;
-  padding-top: 42px;
-  padding-left: 40px;
-}
-.card-populaires h2{
-  font-weight: 900;
-  margin: 0;
-  padding-top: 41px;
-  padding-left: 37px;
-.card-cannebiere h4{
-  margin: 0;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 19px;
-}
 .card-populaires h4{
+  position: relative;
   margin: 0;
-  padding-top: 0;
   width: 169px;
   font-weight: 700;
   font-size: 16px;
   line-height: 19px;
+  top: 16px;
+}
+.card-prix-pop{
+  position: relative;
+  top: 23px;
+}
+.card-etoile-pop{
+  position: relative;
+  top: 44px;
 }
 span{
   font-weight: 900;
 }
-.card-prix-heberg{
-  padding-top: 9px;
+span.fa-solid{
+  color: #0065fc;
+  font-size: 12px;
 }
-.card-prix-pop{
-  padding-top: 7px;
+span i.fa-solid{
+  color: #DEEBFF;
+  font-size: 12px;
 }
