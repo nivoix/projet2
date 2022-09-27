@@ -5,26 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;600&amp;display=swap'">
+    <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/6aa97794ec.js" crossorigin="anonymous"></script>
     <title>booki</title>
 </head>
+<body>
     <header>
+<!-- debut logo et navigation -->
         <nav>
             <img src="images/logo/Booki@3x.png" alt="nom du site">
-                <ul>
-                    <li> 
-                        <a href="#Hebergements">Hébergements</a> 
-                    </li>
-                    <li>
-                        <a href="#Activites">Activités</a> 
-                    </li>
-                </ul>
+            <ul>
+                <li> <a href="#Hebergements">Hébergements</a></li>
+                <li><a href="#Activites">Activités</a></li>
+            </ul>
         </nav>
+<!-- fin logo et navigation-->
+<!-- debut titre-->
         <section classe="title">
             <h1>Trouver votre hébergement pour des vacances de rêve</h1>
             <p>En plein centre ville ou en pleine nature</p>            
         </section>
+<!-- fin de titre-->
+<!-- debut barre de recherche-->
         <div class="search">
             <i class="fa-solid fa-location-dot"></i>
             <form method="post">
@@ -34,32 +36,28 @@
                 <input type="submit" class="button_mobile" value></i>
             </form>
         </div>
-        <div>
-            <div class="filtres">
+<!-- fin barre de recherche-->
+<!-- debut des filtres-->
+        <div class="filtres">
             <h3>Filtres</h3>    
-            <ol>
-                <div class="regroupfiltre">
-                    <li class="billet"><i class="fa-solid fa-money-bill-wave" id=billet></i>Economique</li>
-                    <li class="corps"><i class="fa-solid fa-child-reaching" id=corps></i>Familial</li>
-                </div>
-                    <li class="coeur"><i class="fa-solid fa-heart" id=coeur></i>Romantique</li>
-                    <li class="chien"><i class="fa-sharp fa-solid fa-dog" id=chien></i>Animaux autorisés</li>
-            </ol>
-            </div>
+            <div class="bulle"><i class="fa-solid fa-money-bill-wave"></i>Economique</div>
+            <div class="bulle"><i class="fa-solid fa-child-reaching"></i>Familial</div>
+            <div class="bulle"><i class="fa-solid fa-heart"></i>Romantique</div>
+            <div class="bulle"><i class="fa-sharp fa-solid fa-dog"></i>Animaux autorisés</div>
         </div>
-            <div class="info">
-                <div class="i"><i class="fas fa-info searchResultWrapiconIcon" aria-hidden="true"></i>
-                </div>
-                <p> Plus de 500 logements sont disponibles dans cette ville.
-                </p>
-            </div>  
+<!-- fin des filtres-->
+
+        <div class="info">
+            <i class="fas fa-info searchResultWrapiconIcon" aria-hidden="true"></i>
+            <p> Plus de 500 logements sont disponibles dans cette ville.</p>
+        </div>  
     </header>
     <main>
         <div class="card-heberg">
             <h2 id="Hebergements"> Hébergements à Marseille</h2>
             <div class="cardheberg">
                 <div class="card-cannebiere"><a href="#"></a>
-                    <div class="card-image-heberg"><img src="images\hebergements\1_xlarge\marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="image de l'auberge la Cannebière">
+                    <div class="card-image-heberg"><img src="images\hebergements\4_small\marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="image de l'auberge la Cannebière">
                         <div class="card-body-heberg">
                             <div class="card-nom-heberg"><h4>Auberge La Cannebière</h4></div>
                             <div class="card-prix-heberg">Nuit à partir de 25<span>€</span></div>
@@ -201,6 +199,6 @@
             </div>     
         </div>
     </main>
-        
+    <script src="https://kit.fontawesome.com/6aa97794ec.js" crossorigin="anonymous"></script> 
 </body>
 </html>

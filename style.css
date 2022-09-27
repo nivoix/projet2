@@ -12,6 +12,7 @@ body{/* cadrage de la page*/
 }
 header{
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   align-content: space-between;  
 }
@@ -25,7 +26,8 @@ nav{ /* positionnement du header*/
 }
 img{ /* taille du logo*/
     display: flex;
-   height: 40px;
+    width: 70px;
+    height: 40px;
 }
 ul{ /* cadrage de la navigation*/
   display: flex; 
@@ -34,12 +36,15 @@ ul{ /* cadrage de la navigation*/
   width:30%;
     list-style: none;
     justify-content: space-around;
+    border-bottom: 3px solid transparent;
 }
 li{/* mise en page des raccourcis*/
     display: flex;
     height: 100%;
+    width: 100%;
     align-items: center;
-    justify-content: space-around; 
+    justify-content: space-around;
+    border-top: 3px solid transparent;
 }
 a {
   color: inherit;
@@ -51,36 +56,53 @@ ul li:hover{ /* dynamique des raccourcis*/
   cursor: pointer;
 }
 @media screen and (max-width: 768px) {
+  body{
+    margin: 0;
+  }
   ul li:hover{
-    border-top: none;
+    border-top:none;
     border-bottom: 3px solid #0065fc; 
     width: 100%; 
+    padding-top: 3px;
   }
   nav{
     width: 100%;
-    height: auto;
-    justify-content: center ;
+    height: 100%;
+    justify-content: center;
+    align-content: center;
   }
   ul{
     width: 100%;
+    padding-top: 20px;
     justify-content: center;
     
   }
   li{
     width: 100%;
+    height: 100%;
     justify-content: center;
     align-items: center;
+    padding-bottom: 10px;
     border-bottom: 3px solid #F2F2F2;
   }
   img{
     width: auto;
   }
+  h1, p, .search, h3, .filtres{
+    margin-left: 20px;
+  }
+  h3{
+    width: 100%;
+    margin-left: 0%;
+  } 
 }
 .search{ /* container barre de recherche*/
     display: flex;
     height: 50px;
     width: auto;
-    justify-content: left;    
+    justify-content: left;
+    margin-top: 25px;
+    margin-bottom: 25px; 
 }
 .fa-location-dot{ /*paramètre du bloc icone*/
     display: flex;
@@ -152,79 +174,53 @@ form{ /* paramètre du bloc de saisie ville*/
 }
 h3{/*positionnement du titre filtres*/
   padding-right: 10px;
-  margin-top: 25px;
-  margin-bottom: 1px;
+  margin-top: 0;
+  margin-bottom: 10px;
   font-weight: 900;
-}
-ol{
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  padding-left: 30px;
-  margin-top: 0px;
 }
 .filtres{
   display: flex;
-  justify-content: flex-start;
-  align-content: flex-start;
-  margin-top: 10px;
-}
-li.billet, li.corps, li.coeur, li.chien{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-right: 20px;
-  margin-top: 15px;
-  padding-right: 15px;
-  height: 45px;
-  border-top: 2px solid #F2F2F2;
-  border-right: 2px solid #F2F2F2;
-  border-radius: 45px 45px 45px 45px;
-  font-weight: 900;
-}
-li.billet:hover, li.corps:hover, li.coeur:hover, li.chien:hover{
-  cursor: pointer;background-color: #F2F2F2;
-}
-li.chien{
-  flex-wrap:nowrap;
-  width: 214px;
-}
-li.billet, li.coeur{
-  width: 169px;
-}
-li.corps{
-  width: 133px;
-}
-.regroupfiltre{
-  display: flex;
-  justify-content: flex-start;
+  max-width: 950px;
+  height: auto;
   flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
-#billet,#corps,#coeur,#chien{
+.fa-money-bill-wave, .fa-child-reaching,.fa-heart,.fa-dog{
   display: flex;
   align-items: center;
   justify-content: center;
   color: #0065fc;
+  background-color:transparent;
+  padding-right: 10px;
+}
+.bulle{
+  border: 3px solid #F2F2F2;
+  padding: 10px;
+  border-radius: 45px;
+}
+.bulle:hover{
   background-color: #DEEBFF;
-  border-radius: 50%;
-    width: 45px;
-    height: 45px;
-    margin-right: 10px;
 }
 .info{
   display: flex;
   align-items: baseline;
-  margin-top: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   flex-wrap: nowrap;
   justify-content: flex-start;
   width: auto;
 }
-.i{
+.fas{
   color: #0065fc;
-  display: flex;
   align-items: center;
   justify-content: center;
   border: 4px solid #F2F2F2;
+  padding-top: 5px;
+  padding-left: 10px;
   margin-right: 5px;
   border-radius: 50%;
     height: 35px;
@@ -234,15 +230,9 @@ li.corps{
   .button{
     display: none;
   }
-  .filtres{
-    flex-direction: column;
-    justify-content: flex-start;
+  .bulle{
+    margin-bottom: 10px;
   }
-  ol{
-    display: block;
-    align-content: flex-start;
-    flex-wrap: wrap;
-  } 
 }
 main{
   display: flex;
@@ -253,12 +243,13 @@ main{
   }
 .card-heberg{
   max-width: 880px;
-  min-height: 626px;
+  height: auto;
   background-color: #F2F2F2;
-  box-shadow: 0 5px 20px #999;
+  box-shadow: 0 5px 10px #999;
   border-radius: 20px;
   margin-bottom: 20px;
   padding-bottom: 30px;
+  flex-grow: 1;
 }
 .card-heberg h2 {
   font-weight: 900;
@@ -268,14 +259,14 @@ main{
 }
 .cardheberg{
   display: flex;
-  align-items: flex-start;
   justify-content: space-between;
   flex-wrap: wrap;
+  flex-grow: 1;
   padding-left: 40px;
   padding-right: 40px;
 }
 .card-cannebiere{
-  width: 246px;
+  width: 32%;
   height: 199px;
   background-color: white;
   box-shadow: 0 5px 20px #999;
@@ -327,7 +318,7 @@ main{
 }
 .card-populaires{
   max-width: 420px;
-  height: 625px;
+  height: auto;
   background-color: #F2F2F2;
   box-shadow: 0 5px 20px #999;
   border-radius: 20px;
