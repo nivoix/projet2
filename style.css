@@ -104,22 +104,18 @@ ul li:hover{ /* dynamique des raccourcis*/
     margin-top: 25px;
     margin-bottom: 25px; 
 }
-.fa-location-dot{ /*paramètre du bloc icone*/
+i.fa-location-dot{ /*paramètre du bloc icone*/
     display: flex;
-    position: relative;
-    background-color:#F2F2F2;
+       background-color:#F2F2F2;
     height: 100%;
     width:50px;
-    margin: 0px;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     border-radius: 12px 0 0 12px;
-    padding-left: 20px;
-    padding-top: 15px;
 }
 form{ /* paramètre du bloc de saisie ville*/
   display: flex;
-  padding-left: 15px;
+  padding-left: 5px;
   position: relative;
   font-size: 18px;
   width: auto;
@@ -132,44 +128,30 @@ form{ /* paramètre du bloc de saisie ville*/
 .ville{ /* paramètre du cadre de la barre de rechcerche*/
   width: 100%;
   font-size: 100%;
-  font-weight: bold;
+  font-weight: 900;
   border: transparent;
 }
 .button{/* paramètre du bloc rechercher*/
-  display: flex;
-  position: relative;
-    background-color:#0065FC ;
+    background-color:#0065FC;
     height: 50px;
-    width: 150px;
     align-items: center;
     border-radius: 0 10px 10px 0;
-    margin-right: 0;
-    padding-right: 0;
-    justify-content: center;
     color: white;
 }
 .button:hover{
     cursor: pointer;
 }
-  .fa-magnifying-glass:before, .fa-search:before {/*icone de loupe*/
-    content: "\f002";
-}
-  .button_mobile, .fa-magnifying-glass{/*bouton de la barre de recherche*/
+  i.fa-magnifying-glass{/*bouton de la barre de recherche*/
   width: 50px;
   border-radius: 12px;
   background-color: #0065FC;
   color: white;
-  border: none;
   height: 50px;
   font-weight: 900;
   font-size: medium;
   cursor: pointer;
-  display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: -18%;
-  padding-left: 15px;
-  padding-top: 15px;
   display: none;
 }
 h3{/*positionnement du titre filtres*/
@@ -190,9 +172,6 @@ h3{/*positionnement du titre filtres*/
   margin-bottom: 15px;
 }
 .fa-money-bill-wave, .fa-child-reaching,.fa-heart,.fa-dog{
-  display: flex;
-  align-items: center;
-  justify-content: center;
   color: #0065fc;
   background-color:transparent;
   padding-right: 10px;
@@ -214,7 +193,7 @@ h3{/*positionnement du titre filtres*/
   justify-content: flex-start;
   width: auto;
 }
-.fas{
+i.fas{
   color: #0065fc;
   align-items: center;
   justify-content: center;
@@ -230,8 +209,23 @@ h3{/*positionnement du titre filtres*/
   .button{
     display: none;
   }
+  i.fa-magnifying-glass{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .bulle{
     margin-bottom: 10px;
+  }
+  main{
+    flex-direction: column-reverse;
+  }
+  .card-heberg{
+    width: 100%;
+  }
+  .cardheberg{
+    width: 100%;
+    flex-direction: column;
   }
 }
 main{
@@ -239,17 +233,14 @@ main{
   justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
-  height: auto;
+  gap: 3%;
   }
-.card-heberg{
-  max-width: 880px;
-  height: auto;
+.card-heberg{ /*card grise hébergement*/
   background-color: #F2F2F2;
-  box-shadow: 0 5px 10px #999;
   border-radius: 20px;
   margin-bottom: 20px;
   padding-bottom: 30px;
-  flex-grow: 1;
+  width: 60%;
 }
 .card-heberg h2 {
   font-weight: 900;
@@ -257,67 +248,74 @@ main{
   padding-top: 42px;
   padding-left: 40px;
 }
-.cardheberg{
+.cardheberg{ /*bloc de toutes les cards hebergements*/
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
-  flex-grow: 1;
+  height: auto;
+  width: 100%;
   padding-left: 40px;
   padding-right: 40px;
 }
-.card-cannebiere{
-  width: 32%;
-  height: 199px;
+.card-cannebiere{/* 1 bloc card hébergement*/
+  display: flex;
+  flex-wrap: wrap;
+  width: 31%;
+  min-height: 199px;
+  min-width: 200px;
   background-color: white;
   box-shadow: 0 5px 20px #999;
   border-radius: 20px;
   margin-top: 23px;
 }
-.card-cannebiere:hover {
-  cursor: pointer;
-  transform: scale(1.25);
-}
-.card-image-heberg{
-  height: 100%;
-  width: 95%;
+.image-container{ /* bloc image*/
+  display: flex;
   position: relative;
-  top: 5px;
-  left: 5px;
-  right: 5px;
-  border-radius:20px 20px 0 0;
-}
-.card-image-heberg img{
   width: 100%;
-  height: 60%;
+  height:60%;
+  padding: 2px;
+}
+.image-container img{ /*l'image*/
+  
+  width: 99%;
+  height: 100%;
   border-radius: 20px 20px 0 0 ;
   object-fit: cover;
 }
-.card-body-heberg{
-  position: absolute;
+.card-body-heberg{ /* bloc contenant le nom prix et étoiles*/
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
   background-color: #FFFFFF;
-  top: 123px;
-  left: 11px;
-  bottom: 11px;
-  right: auto;
-}
-.card-cannebiere h4{
-  margin: 0;
+  width: 100%;
+  height: 40%;
+  border-radius: 0 0 20% 20%;
   position: relative;
+}
+.card-body-heberg h4{/* nom de l'hotel*/
+  margin: 0;
+  position:absolute;
+  padding-top: 4px;
   font-weight: 700;
   font-size: 16px;
   line-height: 19px;
-  top: 4px;
+  padding-left: 16px;
 }
-.card-prix-heberg{
-  top: 9px;
-  position: relative;
+.card-body-heberg p{ /* prix de la nuit*/
+  position: absolute;
+  margin: 0;
+  top: 28px;
+  padding-left: 16px;
 }
-.card-etoile-heberg{
-  position: relative;
-  top: 9px;
+.card-etoile-heberg{ /* nombre d'étoile*/
+  position: absolute;
+  top: 52px;
+  padding-left: 16px;
 }
-.card-populaires{
+.card-populaires{ /* bloc gris populaires*/
   max-width: 420px;
+  width: 29%;
   height: auto;
   background-color: #F2F2F2;
   box-shadow: 0 5px 20px #999;
@@ -352,7 +350,7 @@ main{
 }
 .card-soleil-matin:hover{
 cursor: pointer;
-transform: scale(1.25);
+transform: scale(1.05);
 }
 .card-image-pop{
   
