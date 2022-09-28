@@ -7,7 +7,7 @@
 body{/* cadrage de la page*/
     margin: 40px;
     margin-top: 0px;
-    max-width: 1440px;
+    max-width: 1520px;
     max-height: 1884px;
 }
 header{
@@ -205,6 +205,98 @@ i.fas{
     height: 35px;
     width: 35px; 
 }
+main{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 10px;
+  }
+.bloc-heberg{ /*card grise hébergement*/
+  display: flex;
+  flex-direction: column;
+  background-color: #F2F2F2;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 30px;
+  max-width: 63%;
+  width: inherit;
+}
+.cardheberg{
+  height: auto;
+  background-color: red;
+}
+.bloc-populaires{ /* bloc gris populaires*/
+  background-color: #F2F2F2;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  min-width: 35%;
+}
+.bloc-heberg h2 {
+  font-weight: 900;
+  margin: 0;
+  padding-top: 42px;
+  padding-left: 40px;
+}
+.bloc-populaires h2{
+  display: flex;
+  justify-content: space-between;
+  font-weight: 900;
+  margin: 0;
+  padding-top: 41px;
+  padding-left: 37px;
+  padding-right: 37px;
+}
+.bloc-populaires h2 img{
+  width: 33px;
+  height: 18px;
+}
+.card-cannebiere{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 200px;
+}
+.image-container{
+  width: 100%;
+  height: 62%;
+}
+.card-body-heberg{
+  width: 100%;
+  height: 38%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card-body-heberg h4, .card-body-heberg p, .card-etoile-heberg{
+  margin: 0;
+  padding-left: 16px;
+}
+
+.image-container img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.cardpop{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 37px;
+  padding-right: 40px;  
+}
+span{
+  font-weight: 900;
+}
+span.fa-solid{
+  color: #0065fc;
+  font-size: 12px;
+}
+span i.fa-solid{
+  color: #DEEBFF;
+  font-size: 12px;
+}
 @media screen and (max-width: 992px) {
   .button{
     display: none;
@@ -220,188 +312,10 @@ i.fas{
   main{
     flex-direction: column-reverse;
   }
-  .card-heberg{
-    width: 100%;
+  .bloc-populaires{
+    max-width: none;
   }
-  .cardheberg{
-    width: 100%;
-    flex-direction: column;
+  .bloc-heberg{
+    max-width: none;
   }
-}
-main{
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  width: 100%;
-  gap: 3%;
-  }
-.card-heberg{ /*card grise hébergement*/
-  background-color: #F2F2F2;
-  border-radius: 20px;
-  margin-bottom: 20px;
-  padding-bottom: 30px;
-  width: 60%;
-}
-.card-heberg h2 {
-  font-weight: 900;
-  margin: 0;
-  padding-top: 42px;
-  padding-left: 40px;
-}
-.cardheberg{ /*bloc de toutes les cards hebergements*/
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  height: auto;
-  width: 100%;
-  padding-left: 40px;
-  padding-right: 40px;
-}
-.card-cannebiere{/* 1 bloc card hébergement*/
-  display: flex;
-  flex-wrap: wrap;
-  width: 31%;
-  min-height: 199px;
-  min-width: 200px;
-  background-color: white;
-  box-shadow: 0 5px 20px #999;
-  border-radius: 20px;
-  margin-top: 23px;
-}
-.image-container{ /* bloc image*/
-  display: flex;
-  position: relative;
-  width: 100%;
-  height:60%;
-  padding: 2px;
-}
-.image-container img{ /*l'image*/
-  
-  width: 99%;
-  height: 100%;
-  border-radius: 20px 20px 0 0 ;
-  object-fit: cover;
-}
-.card-body-heberg{ /* bloc contenant le nom prix et étoiles*/
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: column;
-  background-color: #FFFFFF;
-  width: 100%;
-  height: 40%;
-  border-radius: 0 0 20% 20%;
-  position: relative;
-}
-.card-body-heberg h4{/* nom de l'hotel*/
-  margin: 0;
-  position:absolute;
-  padding-top: 4px;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 19px;
-  padding-left: 16px;
-}
-.card-body-heberg p{ /* prix de la nuit*/
-  position: absolute;
-  margin: 0;
-  top: 28px;
-  padding-left: 16px;
-}
-.card-etoile-heberg{ /* nombre d'étoile*/
-  position: absolute;
-  top: 52px;
-  padding-left: 16px;
-}
-.card-populaires{ /* bloc gris populaires*/
-  max-width: 420px;
-  width: 29%;
-  height: auto;
-  background-color: #F2F2F2;
-  box-shadow: 0 5px 20px #999;
-  border-radius: 20px;
-  margin-right: 40px;
-}
-.card-populaires h2{
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  font-weight: 900;
-  margin: 0;
-  padding-top: 41px;
-  padding-left: 37px;
-  padding-right: 37px;
-}
-.cardpop{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding-left: 37px;
-  padding-right: 40px;  
-}
-.card-soleil-matin{
-  display: block;
-  width: 343px;
-  height: 144px;
-  background-color: white;
-  box-shadow: 0 5px 20px #999;
-  border-radius: 20px;
-  margin-top: 26px;
-}
-.card-soleil-matin:hover{
-cursor: pointer;
-transform: scale(1.05);
-}
-.card-image-pop{
-  
-  height: 94%;
-  width: 95%;
-  position: relative;
-  top: 5px;
-  left: 5px;
-  bottom: 5px;
-  overflow: hidden;
-  margin-left: 0;
-  border-radius:20px 20px 0 0;
-}
-.card-image-pop img{
-  width: 40%;
-  height: 100%;
-  border-radius: 20px 0 0 20px;
-  position: absolute;
-  object-fit: cover;
-}
-.card-body-pop{
-  position: absolute;
-  background-color: #FFFFFF;
-  top: 0;
-  left: 147px;
-}
-.card-populaires h4{
-  position: relative;
-  margin: 0;
-  width: 169px;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 19px;
-  top: 16px;
-}
-.card-prix-pop{
-  position: relative;
-  top: 23px;
-}
-.card-etoile-pop{
-  position: relative;
-  top: 44px;
-}
-span{
-  font-weight: 900;
-}
-span.fa-solid{
-  color: #0065fc;
-  font-size: 12px;
-}
-span i.fa-solid{
-  color: #DEEBFF;
-  font-size: 12px;
-}
+} 
