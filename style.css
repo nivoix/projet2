@@ -194,7 +194,7 @@ main{
   padding-left: 20px;
 }
 .card-cannebiere{ /* une card*/
-  margin: 13px 13px auto 13px;
+  margin: 13px 13px 13px 13px;
   display: flex;
   flex-wrap: wrap;
   width: 27%;
@@ -227,8 +227,8 @@ main{
   padding-left: 16px;
 }
 .lien{
-  padding-top: 24px;
-  margin-left: 20px;
+  padding-top: 28px;
+  margin-left: 44px;
   font-weight: 900;
   cursor: pointer;
 }
@@ -289,7 +289,6 @@ main{
   height: 100%;
   display: flex;
   flex-direction: column;
-  
 }
 .card-body-pop h4, .card-body-pop p, .card-etoile-pop{
   margin: 0;
@@ -317,9 +316,43 @@ span i.fa-solid{
   color: #DEEBFF;
   font-size: 12px;
 }
-.card-cannebiere:hover, .card-soleil-matin:hover{
+.card-cannebiere:hover, .card-soleil-matin:hover, .card-vieuxport:hover{
   transform:scale(1.05);
   cursor: pointer;
+}
+.bloc-activites{/*bloc gris activités*/
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  border-radius: 20px;
+  margin: 18.47px 10px 61px 0;
+  width: 107%;
+}
+.card-vieuxport{/* une card*/
+  display:flex ;
+  flex-direction: column;
+  border-radius: 20px;
+  max-height: 444.51px;
+  max-width: 21%;
+  margin: 0 43px 0 0;
+}
+.image-container-activ{ /* cadre photo*/
+  width: 100%;
+  height: 87%;
+  border-radius: 20px 20px 0 0;
+}
+.image-container-activ img{ /* photo*/
+  border-radius: 20px 20px 0 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card-body-activ{/*carte renseignement*/
+  display: flex;
+  height: 56px;
+  align-items: center;
+  padding-left: 19px;
+  background-color: white;
 }
 @media screen and (max-width: 1200px) {
   main{
@@ -425,5 +458,9 @@ span i.fa-solid{
   }
   .bloc-heberg, .cardheberg, .card-cannebiere{
     width: 100%;
+  }
+  .card-soleil-matin{
+    margin: auto;
+    margin-bottom: 11px;
   }
 }
