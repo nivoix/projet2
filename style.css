@@ -55,6 +55,10 @@ ul li:hover{ /* dynamique des raccourcis*/
   color: #0065FC;
   cursor: pointer;
 }
+h1{
+  font-size: 22px;
+  line-height: 25.83px;
+}
 .search{ /* container barre de recherche*/
     display: flex;
     height: 50px;
@@ -189,9 +193,11 @@ main{
 }
 .bloc-heberg h2 {
   font-weight: 900;
+  font-size: 22px;
+  line-height: 25.83px;
   margin: 0;
   padding-top: 42px;
-  padding-left: 20px;
+  padding-left: 40px;
 }
 .card-cannebiere{ /* une card*/
   margin: 13px 13px 13px 13px;
@@ -252,9 +258,11 @@ main{
   align-items: center;
   justify-content: space-between;
   font-weight: 900;
+  font-size: 22px;
+  line-height: 25.83px;
   margin: 0;
   padding-top: 41px;
-  padding-left: 16px;
+  padding-left: 37px;
   padding-right: 37px;
 }
 .bloc-populaires h2 img{
@@ -299,6 +307,7 @@ main{
   margin-top: 16px;
   margin-bottom: 7px;
   font-weight: 900;
+  font-size: 16px;
 }
 .card-etoile-pop{
   margin-top: auto;
@@ -320,6 +329,11 @@ span i.fa-solid{
   transform:scale(1.05);
   cursor: pointer;
 }
+section h2{
+  font-size: 22px;
+  line-height: 25.83px;
+  font-weight: 900;
+}
 .bloc-activites{/*bloc gris activités*/
   display: flex;
   flex-direction: row;
@@ -339,6 +353,7 @@ span i.fa-solid{
 .image-container-activ{ /* cadre photo*/
   width: 100%;
   height: 87%;
+  max-height: 389px;
   border-radius: 20px 20px 0 0;
 }
 .image-container-activ img{ /* photo*/
@@ -364,19 +379,29 @@ footer{
 }
 footer h5{
   height: 21px;
+  font-size: 18px;
   font-weight: 900;
 }
 .apropos{
-  margin: 45px 230px 58px 70px;
+  margin-top: 45px;
+  margin-left: 70px;
+  height: 100%;
+  width: 21%;
 }
 .nosheberg{
   margin-top: 45px;
-  margin-right: 239px;
+  margin-left: 10%;
+  height: 100%;
+  width: 19%;
 }
 .assistance{
   margin-top: 45px;
+  margin-left: 10%;
+  height: 100%;
+  width: 13%;
 }
 footer p:hover{
+  cursor: pointer;
   color: #0065fc;
 }
 @media screen and (max-width: 1200px) {
@@ -429,6 +454,30 @@ footer p:hover{
   }
   .card-soleil-matin{
     width: 90%;
+  }
+  .bloc-activites{
+    flex-direction: column;
+    width: 100%;
+  }
+  .card-vieuxport{
+    width: 100%;
+    max-width: none;
+    max-height: 190px;
+  }
+  .image-container-activ{
+    height: auto;
+    max-height: 70%;
+    height: 134px;
+  }
+  footer{
+    flex-direction: column;
+    max-height: none;
+    height: 100%;
+  }
+  .apropos, .nosheberg, .assistance{
+    margin-left: 33px;
+    margin-top: 45px;
+    width: 100%;
   }
 } 
               /*MOBILES*/
@@ -487,5 +536,11 @@ footer p:hover{
   .card-soleil-matin{
     margin: auto;
     margin-bottom: 11px;
+  }
+  .bloc-activites{
+    flex-direction: column;
+  }
+  footer{
+    flex-direction: column;
   }
 }
