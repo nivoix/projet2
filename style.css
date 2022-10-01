@@ -354,6 +354,31 @@ span i.fa-solid{
   padding-left: 19px;
   background-color: white;
 }
+footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: #F2F2F2;
+  width: 100%;
+  max-height: 225px;
+}
+footer h5{
+  height: 21px;
+  font-weight: 900;
+}
+.apropos{
+  margin: 45px 230px 58px 70px;
+}
+.nosheberg{
+  margin-top: 45px;
+  margin-right: 239px;
+}
+.assistance{
+  margin-top: 45px;
+}
+footer p:hover{
+  color: #0065fc;
+}
 @media screen and (max-width: 1200px) {
   main{
     flex-direction: column;
