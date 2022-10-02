@@ -207,6 +207,7 @@ main{
   height: 199px;
   background-color: white;
   border-radius: 20px;
+  box-shadow: 2px 2px 15px 5px #bbb9b9;
 }
 .image-container{ /* cadre photo*/
   width: 100%;
@@ -240,7 +241,6 @@ main{
 }
 .lien a:hover{
   color: #0065fc;
-  transform: 1.5;
 }
 .bloc-populaires{ /* bloc gris populaires*/
   background-color: #F2F2F2;
@@ -279,6 +279,7 @@ main{
   background-color: white;
   border-radius: 20px;
   position: relative;
+  box-shadow: 2px 2px 15px 5px #bbb9b9;
 }
 .card-image-pop{ /* cadre photo*/
   min-width: 42%;
@@ -349,6 +350,7 @@ section h2{
   max-height: 444.51px;
   max-width: 21%;
   margin: 0 43px 0 0;
+  box-shadow: 2px 2px 5px 5px #F2F2F2;
 }
 .image-container-activ{ /* cadre photo*/
   width: 100%;
@@ -368,6 +370,7 @@ section h2{
   align-items: center;
   padding-left: 19px;
   background-color: white;
+  border-radius: 0 0 20px 20px;
 }
 footer{
   display: flex;
@@ -457,12 +460,13 @@ footer p:hover{
   }
   .bloc-activites{
     flex-direction: column;
-    width: 100%;
+    width: 96%;
   }
   .card-vieuxport{
     width: 100%;
     max-width: none;
     max-height: 190px;
+    margin-top: 24px;
   }
   .image-container-activ{
     height: auto;
@@ -521,7 +525,6 @@ footer p:hover{
     margin-left: 0%;
   }
   .bloc-heberg{
-    border-radius: none;
     background-color: white;
   }
   .bloc-populaires{
@@ -539,6 +542,9 @@ footer p:hover{
   }
   .bloc-activites{
     flex-direction: column;
+  }
+  section h2, section .bloc-activites{
+    margin-left: 21px;
   }
   footer{
     flex-direction: column;
