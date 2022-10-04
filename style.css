@@ -5,52 +5,51 @@
   font-family: 'Raleway', sans-serif;
 }
 body{/* cadrage de la page*/
-    margin: 50px;
-    margin-top: 0px;
-    max-width: 1520px;
-    max-height: 1884px;
+  margin-inline: 10px;
+  margin-top: 0px;
+  max-width: 1440px;
 }
-header{
+.entete{
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   align-content: space-between;  
 }
-nav{ /* positionnement du header*/
-    display: flex;
-    width: 100%;
-    height: 100px;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
+.navig{ /* positionnement du header*/
+  display: flex;
+  width: 100%;
+  height: 100px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
 }
 img{ /* taille du logo*/
-    display: flex;
-    width: 70px;
-    height: 40px;
+  display: flex;
+  width: 70px;
+  height: 40px;
 }
-ul{ /* cadrage de la navigation*/
+.selection{ /* cadrage de la navigation*/
   display: flex; 
   height: 100%;
   margin: 0;
   width:30%;
-    list-style: none;
-    justify-content: space-around;
-    border-bottom: 3px solid transparent;
+  list-style: none;
+  justify-content: space-around;
+  border-bottom: 3px solid transparent;
 }
-li{/* mise en page des raccourcis*/
-    display: flex;
-    height: 100%;
-    width: 100%;
-    align-items: center;
-    justify-content: space-around;
-    border-top: 3px solid transparent;
+.choixselect{/* mise en page des raccourcis*/
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  border-top: 3px solid transparent;
 }
 a {
   color: inherit;
   text-decoration: none;
 }
-ul li:hover{ /* dynamique des raccourcis*/
+.choixselect:hover{ /* dynamique des raccourcis*/
   border-top: 3px solid #0065fc;
   color: #0065FC;
   cursor: pointer;
@@ -60,21 +59,21 @@ h1{
   line-height: 25.83px;
 }
 .search{ /* container barre de recherche*/
-    display: flex;
-    height: 50px;
-    width: auto;
-    justify-content: left;
-    margin-top: 25px;
-    margin-bottom: 25px; 
+  display: flex;
+  height: 50px;
+  width: auto;
+  justify-content: left;
+  margin-top: 25px;
+  margin-bottom: 25px; 
 }
 i.fa-location-dot{ /*paramètre du bloc icone*/
-    display: flex;
-       background-color:#F2F2F2;
-    height: 100%;
-    width:50px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 12px 0 0 12px;
+  display: flex;
+  background-color:#F2F2F2;
+  height: 100%;
+  width:50px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px 0 0 12px;
 }
 form{ /* paramètre du bloc de saisie ville*/
   display: flex;
@@ -95,16 +94,17 @@ form{ /* paramètre du bloc de saisie ville*/
   border: transparent;
 }
 .button{/* paramètre du bloc rechercher*/
-    background-color:#0065FC;
-    height: 50px;
-    align-items: center;
-    border-radius: 0 10px 10px 0;
-    color: white;
+  background-color:#0065FC;
+  height: 50px;
+  align-items: center;
+  border-radius: 0 10px 10px 0;
+  color: white;
+  padding-inline: 4%;
 }
 .button:hover{
-    cursor: pointer;
+  cursor: pointer;
 }
-  i.fa-magnifying-glass{/*bouton de la barre de recherche*/
+i.loupe{/*bouton de la barre de recherche*/
   width: 50px;
   border-radius: 12px;
   background-color: #0065FC;
@@ -117,12 +117,6 @@ form{ /* paramètre du bloc de saisie ville*/
   align-items: center;
   display: none;
 }
-h3{/*positionnement du titre filtres*/
-  padding-right: 10px;
-  margin-top: 0;
-  margin-bottom: 10px;
-  font-weight: 900;
-}
 .filtres{
   display: flex;
   max-width: 950px;
@@ -134,7 +128,13 @@ h3{/*positionnement du titre filtres*/
   margin-top: 15px;
   margin-bottom: 15px;
 }
-.fa-money-bill-wave, .fa-child-reaching,.fa-heart,.fa-dog{
+.titrefiltre{/*positionnement du titre filtres*/
+  padding-right: 10px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: 900;
+}
+.logo{
   color: #0065fc;
   background-color:transparent;
   padding-right: 10px;
@@ -143,9 +143,14 @@ h3{/*positionnement du titre filtres*/
   border: 3px solid #F2F2F2;
   padding: 10px;
   border-radius: 45px;
+  width: auto;
 }
 .bulle:hover{
   background-color: #DEEBFF;
+  cursor: pointer;
+}
+.nomfiltre{
+  height: 11px;
 }
 .info{
   display: flex;
@@ -156,7 +161,7 @@ h3{/*positionnement du titre filtres*/
   justify-content: flex-start;
   width: auto;
 }
-i.fas{
+i.logi{
   color: #0065fc;
   align-items: center;
   justify-content: center;
@@ -168,28 +173,27 @@ i.fas{
     height: 35px;
     width: 35px; 
 }
-main{
+.bloccard{
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
-  gap: 8px;
+  justify-content: space-between;
   }
 .bloc-heberg{ /*bloc gris hébergement*/
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   background-color: #F2F2F2;
   border-radius: 20px;
-  margin-bottom: 20px;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
   width: 65%;
 }
 .cardheberg{ /*container des cards*/
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  gap: 2%;
   flex-wrap: wrap;
-  height: auto;
 }
 .bloc-heberg h2 {
   font-weight: 900;
@@ -197,10 +201,10 @@ main{
   line-height: 25.83px;
   margin: 0;
   padding-top: 42px;
+  padding-bottom: 10px;
   padding-left: 40px;
 }
 .card-cannebiere{ /* une card*/
-  margin: 13px 13px 13px 13px;
   display: flex;
   flex-wrap: wrap;
   width: 27%;
@@ -223,7 +227,7 @@ main{
 }
 .card-body-heberg{ /*carte renseignement*/
   width: 100%;
-  height: 38%;
+  height: 35%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -235,7 +239,7 @@ main{
 }
 .lien{
   padding-top: 28px;
-  margin-left: 44px;
+  margin-left: 24px;
   font-weight: 900;
   cursor: pointer;
 }
@@ -243,15 +247,18 @@ main{
   color: #0065fc;
 }
 .bloc-populaires{ /* bloc gris populaires*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   background-color: #F2F2F2;
   border-radius: 20px;
-  margin-bottom: 20px;
-  width: 31%;
+  width: 30%;
 }
 .cardpop{ /*container des cards*/
-  height: auto;
-  display: block;
-  padding-bottom: 23px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 .bloc-populaires h2{
   display: flex;
@@ -262,7 +269,8 @@ main{
   line-height: 25.83px;
   margin: 0;
   padding-top: 41px;
-  padding-left: 37px;
+  padding-bottom: 10px;
+  padding-left: 27px;
   padding-right: 37px;
 }
 .bloc-populaires h2 img{
@@ -271,7 +279,7 @@ main{
   height: 20px;
 }
 .card-soleil-matin{ /* une card*/
-  margin: 33px 40px 33px 37px;
+  margin-inline: 20px;
   display: flex;
   flex-wrap: nowrap;
   width: auto;
@@ -341,7 +349,7 @@ section h2{
   flex-wrap: nowrap;
   border-radius: 20px;
   margin: 18.47px 10px 61px 0;
-  width: 107%;
+  width: 100%;
 }
 .card-vieuxport{/* une card*/
   display:flex ;
@@ -407,41 +415,18 @@ footer p:hover{
   cursor: pointer;
   color: #0065fc;
 }
-@media screen and (max-width: 1200px) {
-  main{
-    flex-direction: column;
-    align-content: center;
-  }
-  .bloc-populaires, .bloc-heberg{
-    width: 100%;
-    margin: 20px 20px 0 20px;
-  }
-  .cardpop{
-    display: flex;
-  }
-  .card-soleil-matin{
-    margin: 40px 26px 11px 48px;
-    width: 28%;
-  }
-  .card-body-pop h4{
-    margin-top: 8px;
-  }
-}
          /* TABLETTES*/
 @media screen and (max-width: 992px) {
   .button{
     display: none;
   }
-  i.fa-magnifying-glass{
+  I.loupe{
     display: flex;
     justify-content: center;
     align-items: center;
   }
   .bulle{
     margin-bottom: 10px;
-  }
-  main{
-    flex-direction: column-reverse;
   }
   .bloc-populaires{
     width: inherit;
@@ -473,40 +458,41 @@ footer p:hover{
     max-height: 70%;
     height: 134px;
   }
-  footer{
-    flex-direction: column;
-    max-height: none;
-    height: 100%;
+footer{
+  flex-direction: column;
+  max-height: none;
+  height: 100%;
   }
-  .apropos, .nosheberg, .assistance{
-    margin-left: 33px;
-    margin-top: 45px;
-    width: 100%;
+.apropos, .nosheberg, .assistance{
+  width: 100%;
   }
 } 
               /*MOBILES*/
 @media screen and (max-width: 768px) {
   body{
-    margin: 0;
+  margin: 0;
   }
-  ul li:hover{
+  .titre, .search, .filtres, .info{
+  margin-left: 20px;
+  }
+  .choixselect:hover{
     border-top:none;
     border-bottom: 3px solid #0065fc; 
     width: 100%; 
     padding-top: 3px;
   }
-  nav{
+  .navig{
     width: 100%;
     height: 100%;
     justify-content: center;
     align-content: center;
   }
-  ul{
+  .selection{
     width: 100%;
     padding-top: 20px;
     justify-content: center;
   }
-  li{
+  .choixselect{
     width: 100%;
     height: 100%;
     justify-content: center;
@@ -517,12 +503,15 @@ footer p:hover{
   img{
     width: auto;
   }
-  h1, p, .search, h3, .filtres{
-    margin-left: 20px;
-  }
-  h3{
+  .titrefiltre{
     width: 100%;
     margin-left: 0%;
+  }
+  .bulle{
+    width: 160px;
+  }
+  .bloccard{
+    flex-direction: column-reverse;
   }
   .bloc-heberg{
     background-color: white;

@@ -10,18 +10,18 @@
     <title>booki</title>
 </head>
 <body>
-    <header>
+    <header class="entete">
 <!-- debut logo et navigation -->
-        <nav>
+        <nav class="navig">
             <img src="images/logo/Booki@3x.png" alt="nom du site">
-            <ul>
-                <li> <a href="#Hebergements">Hébergements</a></li>
-                <li><a href="#Activites">Activités</a></li>
+            <ul class="selection">
+                <li class="choixselect"> <a href="#Hebergements">Hébergements</a></li>
+                <li class="choixselect"><a href="#Activites">Activités</a></li>
             </ul>
         </nav>
 <!-- fin logo et navigation-->
 <!-- debut titre-->
-        <section>
+        <section class="titre">
             <h1>Trouver votre hébergement pour des vacances de rêve</h1>
             <p>En plein centre ville ou en pleine nature</p>            
         </section>
@@ -32,27 +32,27 @@
             <form method="post">
                 <input type="search" name="villes" class="ville" placeholder="Marseille, France">
                 <input type="submit" class="button" value="Rechercher" disabled="disabled">      
-                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-magnifying-glass loupe"></i>
             </form>
         </div>
 <!-- fin barre de recherche-->
 <!-- debut des filtres-->
-        <div class="filtres">
-            <h3>Filtres</h3>    
-            <div class="bulle"><i class="fa-solid fa-money-bill-wave"></i>Economique</div>
-            <div class="bulle"><i class="fa-solid fa-child-reaching"></i>Familial</div>
-            <div class="bulle"><i class="fa-solid fa-heart"></i>Romantique</div>
-            <div class="bulle"><i class="fa-sharp fa-solid fa-dog"></i>Animaux autorisés</div>
+        <div class="filtres"> 
+            <h3 class="titrefiltre">Filtres</h3>
+            <div class="bulle"><i class="fa-solid fa-money-bill-wave logo"></i><span class="nomfiltre">Economique</span></div>
+            <div class="bulle"><i class="fa-solid fa-child-reaching logo"></i><span class="nomfiltre">Familial</span></div>
+            <div class="bulle"><i class="fa-solid fa-heart logo"></i><span class="nomfiltre">Romantique</span></div>
+            <div class="bulle"><i class="fa-sharp fa-solid fa-dog logo"></i><span class="nomfiltre">Animaux autorisés</span></div>
         </div>
 <!-- fin des filtres-->
 
         <div class="info">
-            <i class="fas fa-info searchResultWrapiconIcon" aria-hidden="true"></i>
+            <i class="fas fa-info searchResultWrapiconIcon logi" aria-hidden="true"></i>
             <p> Plus de 500 logements sont disponibles dans cette ville.</p>
         </div>  
     </header>
 
-    <main><!--debut des cards-->
+    <main class="bloccard"><!--debut des cards-->
 
         <div class="bloc-heberg"><!--debut bloc gris hébergements-->
     
