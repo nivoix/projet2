@@ -476,6 +476,7 @@ footer{
 @media screen and (max-width: 768px) {
   body{
   margin: 0;
+  padding-inline: 0;
   }
   .titre, .search, .filtres, .info{
   margin-left: 20px;
@@ -520,6 +521,10 @@ footer{
   }
   .bloc-heberg{
     background-color: white;
+    height: auto;
+  }
+  .bloc-heberg h2{
+    padding-left: 10px;
   }
   .bloc-populaires{
     border-radius: inherit;
@@ -527,11 +532,21 @@ footer{
   .card-cannebiere{
   box-shadow: 4px 4px 6px 5px #F2F2F2;
   }
-  .bloc-heberg, .cardheberg, .card-cannebiere{
+  .cardheberg{
+    flex-direction: column;
+    height: auto;
+    width: 92%;
+    margin-inline: 2%;
+  }
+  .liencard{
     width: 100%;
+    padding-bottom: 10px;
+  }
+  .cardpop{
+    flex-direction: column;
+    margin-inline: 10px;
   }
   .card-soleil-matin{
-    margin: auto;
     margin-bottom: 11px;
   }
   .bloc-activites{
