@@ -5,9 +5,9 @@
   font-family: 'Raleway', sans-serif;
 }
 body{/* cadrage de la page*/
-  margin-inline: 10px;
   margin-top: 0px;
-  max-width: 1440px;
+  max-width: 1400px;
+  padding-inline: 40px;
 }
 .entete{
   display: flex;
@@ -45,7 +45,7 @@ img{ /* taille du logo*/
   justify-content: space-around;
   border-top: 3px solid transparent;
 }
-a {
+.liennav {
   color: inherit;
   text-decoration: none;
 }
@@ -119,10 +119,9 @@ i.loupe{/*bouton de la barre de recherche*/
 }
 .filtres{
   display: flex;
-  max-width: 950px;
   height: auto;
   flex-direction: row;
-  justify-content: space-between;
+  gap: 8%;
   flex-wrap: wrap;
   align-items: center;
   margin-top: 15px;
@@ -140,6 +139,8 @@ i.loupe{/*bouton de la barre de recherche*/
   padding-right: 10px;
 }
 .bulle{
+  display: flex;
+  height: 50px;
   border: 3px solid #F2F2F2;
   padding: 10px;
   border-radius: 45px;
@@ -150,7 +151,8 @@ i.loupe{/*bouton de la barre de recherche*/
   cursor: pointer;
 }
 .nomfiltre{
-  height: 11px;
+  height: 10px;
+  font-weight: 400;
 }
 .info{
   display: flex;
@@ -181,37 +183,43 @@ i.logi{
   }
 .bloc-heberg{ /*bloc gris hébergement*/
   display: flex;
+  justify-content: center;
   flex-direction: column;
-  justify-content: space-around;
+  height: 626px;
   background-color: #F2F2F2;
   border-radius: 20px;
-  padding-bottom: 20px;
-  width: 65%;
+  gap: 5%;
+  width: 67%;
 }
 .cardheberg{ /*container des cards*/
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  gap: 2%;
+  gap: 3%;
   flex-wrap: wrap;
+  height: 67%;
 }
 .bloc-heberg h2 {
   font-weight: 900;
   font-size: 22px;
   line-height: 25.83px;
   margin: 0;
-  padding-top: 42px;
-  padding-bottom: 10px;
   padding-left: 40px;
+}
+.liencard{
+  color: inherit;
+  text-decoration: none;
+  width: 30%;
 }
 .card-cannebiere{ /* une card*/
   display: flex;
   flex-wrap: wrap;
-  width: 27%;
+  width: 100%;
   height: 199px;
   background-color: white;
   border-radius: 20px;
   box-shadow: 2px 2px 15px 5px #bbb9b9;
+  transition: all 400ms;
 }
 .image-container{ /* cadre photo*/
   width: 100%;
@@ -238,6 +246,8 @@ i.logi{
   padding-left: 16px;
 }
 .lien{
+  margin-top: 0;
+  margin-bottom: 0;
   padding-top: 28px;
   margin-left: 24px;
   font-weight: 900;
@@ -288,6 +298,7 @@ i.logi{
   border-radius: 20px;
   position: relative;
   box-shadow: 2px 2px 15px 5px #bbb9b9;
+  transition: all 400ms;
 }
 .card-image-pop{ /* cadre photo*/
   min-width: 42%;
@@ -313,7 +324,7 @@ i.logi{
   flex-wrap: wrap;
 }
 .card-body-pop h4{
-  margin-top: 16px;
+  margin-top: 10px;
   margin-bottom: 7px;
   font-weight: 900;
   font-size: 16px;
@@ -335,10 +346,11 @@ span i.fa-solid{
   font-size: 12px;
 }
 .card-cannebiere:hover, .card-soleil-matin:hover, .card-vieuxport:hover{
-  transform:scale(1.05);
+  transform:scale(1.1);
   cursor: pointer;
 }
-section h2{
+.zactivites h2{
+  padding-top: 42px;
   font-size: 22px;
   line-height: 25.83px;
   font-weight: 900;
@@ -348,8 +360,9 @@ section h2{
   flex-direction: row;
   flex-wrap: nowrap;
   border-radius: 20px;
-  margin: 18.47px 10px 61px 0;
+  margin: 18px 0 61px 0;
   width: 100%;
+  justify-content: space-between;
 }
 .card-vieuxport{/* une card*/
   display:flex ;
@@ -359,6 +372,7 @@ section h2{
   max-width: 21%;
   margin: 0 43px 0 0;
   box-shadow: 2px 2px 5px 5px #F2F2F2;
+  transition: transform 400ms;
 }
 .image-container-activ{ /* cadre photo*/
   width: 100%;
@@ -425,38 +439,29 @@ footer p:hover{
     justify-content: center;
     align-items: center;
   }
+  .filtres{
+    width: 97%;
+  }
   .bulle{
     margin-bottom: 10px;
   }
-  .bloc-populaires{
-    width: inherit;
-  }
+  
   .bloc-heberg, .cardheberg, .card-cannebiere{
     width: 100%;
   }
   .image-container img{ /* photo*/
     object-fit: cover;
   }
-  .cardpop {
-    display: block;
+  .bloc-populaires{
+    width: 100%;
+    margin-top: 20px;
+  }
+  .cardpop{
+    flex-direction: row;
+    margin-bottom: 47px;
   }
   .card-soleil-matin{
     width: 90%;
-  }
-  .bloc-activites{
-    flex-direction: column;
-    width: 96%;
-  }
-  .card-vieuxport{
-    width: 100%;
-    max-width: none;
-    max-height: 190px;
-    margin-top: 24px;
-  }
-  .image-container-activ{
-    height: auto;
-    max-height: 70%;
-    height: 134px;
   }
 footer{
   flex-direction: column;
@@ -508,7 +513,7 @@ footer{
     margin-left: 0%;
   }
   .bulle{
-    width: 160px;
+    width: 40%;
   }
   .bloccard{
     flex-direction: column-reverse;
@@ -531,6 +536,17 @@ footer{
   }
   .bloc-activites{
     flex-direction: column;
+  }
+  .card-vieuxport{
+    width: 100%;
+    max-width: none;
+    max-height: 190px;
+    margin-top: 24px;
+  }
+  .image-container-activ{
+    height: auto;
+    max-height: 70%;
+    height: 134px;
   }
   section h2, section .bloc-activites{
     margin-left: 21px;
