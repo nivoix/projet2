@@ -63,7 +63,7 @@ h1{
   height: 50px;
   width: auto;
   justify-content: left;
-  margin-top: 25px;
+  margin-top: 15px;
   margin-bottom: 25px; 
 }
 i.fa-location-dot{ /*paramètre du bloc icone*/
@@ -121,7 +121,7 @@ i.loupe{/*bouton de la barre de recherche*/
   display: flex;
   height: auto;
   flex-direction: row;
-  gap: 8%;
+  gap: 5%;
   flex-wrap: wrap;
   align-items: center;
   margin-top: 15px;
@@ -161,7 +161,7 @@ i.loupe{/*bouton de la barre de recherche*/
   margin-bottom: 15px;
   flex-wrap: nowrap;
   justify-content: flex-start;
-  width: auto;
+  width: 95%;
 }
 i.logi{
   color: #0065fc;
@@ -278,8 +278,8 @@ i.logi{
   font-size: 22px;
   line-height: 25.83px;
   margin: 0;
-  padding-top: 41px;
-  padding-bottom: 10px;
+  padding-top: 37px;
+  padding-bottom: 12px;
   padding-left: 27px;
   padding-right: 37px;
 }
@@ -287,6 +287,9 @@ i.logi{
   color: #0065fc;
   width: 35px;
   height: 20px;
+}
+.liencardpop{
+  text-decoration: none;
 }
 .card-soleil-matin{ /* une card*/
   margin-inline: 20px;
@@ -346,11 +349,11 @@ span i.fa-solid{
   font-size: 12px;
 }
 .card-cannebiere:hover, .card-soleil-matin:hover, .card-vieuxport:hover{
-  transform:scale(1.1);
+  transform:scale(1.07);
   cursor: pointer;
 }
 .zactivites h2{
-  padding-top: 42px;
+  padding-top: 20px;
   font-size: 22px;
   line-height: 25.83px;
   font-weight: 900;
@@ -368,15 +371,18 @@ span i.fa-solid{
   display:flex ;
   flex-direction: column;
   border-radius: 20px;
-  max-height: 444.51px;
-  max-width: 21%;
-  margin: 0 43px 0 0;
+  height: 100%;
+  width: 100%;
   box-shadow: 2px 2px 5px 5px #F2F2F2;
   transition: transform 400ms;
 }
+.liencardactiv{
+  width: 23%;
+  text-decoration: none;
+}
 .image-container-activ{ /* cadre photo*/
   width: 100%;
-  height: 87%;
+  height: 81%;
   max-height: 389px;
   border-radius: 20px 20px 0 0;
 }
@@ -387,14 +393,16 @@ span i.fa-solid{
   object-fit: cover;
 }
 .card-body-activ{/*carte renseignement*/
-  display: flex;
   height: 56px;
   align-items: center;
   padding-left: 19px;
   background-color: white;
   border-radius: 0 0 20px 20px;
 }
-footer{
+.view-mobile{
+  display: none;
+}
+.pied-page{
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -402,35 +410,25 @@ footer{
   width: 100%;
   max-height: 225px;
 }
-footer h5{
+.colone{
+  width: 33%;
+}
+.titrepiedpage{
   height: 21px;
   font-size: 18px;
   font-weight: 900;
+  margin-bottom: 10px;
+  list-style: none;
 }
-.apropos{
-  margin-top: 45px;
-  margin-left: 70px;
-  height: 100%;
-  width: 21%;
+.lienpiedpage{
+  list-style: none;
 }
-.nosheberg{
-  margin-top: 45px;
-  margin-left: 10%;
-  height: 100%;
-  width: 19%;
-}
-.assistance{
-  margin-top: 45px;
-  margin-left: 10%;
-  height: 100%;
-  width: 13%;
-}
-footer p:hover{
+.lienpiedpage:hover{
   cursor: pointer;
   color: #0065fc;
 }
          /* TABLETTES*/
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 991px) {
   .button{
     display: none;
   }
@@ -440,12 +438,11 @@ footer p:hover{
     align-items: center;
   }
   .filtres{
-    width: 97%;
+    width: 96%;
   }
   .bulle{
     margin-bottom: 10px;
   }
-  
   .bloc-heberg, .cardheberg, .card-cannebiere{
     width: 100%;
   }
@@ -459,27 +456,33 @@ footer p:hover{
   .cardpop{
     flex-direction: row;
     margin-bottom: 47px;
+    justify-content: space-evenly;
+  }
+  .liencardpop{
+    width: 30%;
   }
   .card-soleil-matin{
-    width: 90%;
+    width: 100%;
+    margin: 0;
   }
-footer{
-  flex-direction: column;
-  max-height: none;
-  height: 100%;
+  .card-image-pop{
+    min-width: 45%;
   }
-.apropos, .nosheberg, .assistance{
-  width: 100%;
+  .card-body-pop h4{
+    margin-top: 7px;
+  }
+  .card-body-pop h4, .card-body-pop p, .card-etoile-pop{
+    padding-left: 2%;
   }
 } 
               /*MOBILES*/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   body{
   margin: 0;
   padding-inline: 0;
   }
   .titre, .search, .filtres, .info{
-  margin-left: 20px;
+  margin-left: 4px;
   }
   .choixselect:hover{
     border-top:none;
@@ -516,6 +519,9 @@ footer{
   .bulle{
     width: 40%;
   }
+  .info, .filtres{
+    margin-top: 0;
+  }
   .bloccard{
     flex-direction: column-reverse;
   }
@@ -525,9 +531,12 @@ footer{
   }
   .bloc-heberg h2{
     padding-left: 10px;
+    padding-top: 25px;
+    padding-bottom: 15px;
   }
   .bloc-populaires{
     border-radius: inherit;
+    margin-top: 0;
   }
   .card-cannebiere{
   box-shadow: 4px 4px 6px 5px #F2F2F2;
@@ -540,33 +549,46 @@ footer{
   }
   .liencard{
     width: 100%;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
   }
   .cardpop{
     flex-direction: column;
     margin-inline: 10px;
   }
+  .liencardpop{
+    width: 100%;
+    padding-bottom: 10px;
+  }
   .card-soleil-matin{
     margin-bottom: 11px;
+    width: 96%;
   }
   .bloc-activites{
     flex-direction: column;
+    width: 92%;
+  }
+  .liencardactiv{
+    width: 100%;
   }
   .card-vieuxport{
     width: 100%;
-    max-width: none;
     max-height: 190px;
     margin-top: 24px;
+    margin-inline: 2%;
   }
   .image-container-activ{
-    height: auto;
     max-height: 70%;
     height: 134px;
   }
-  section h2, section .bloc-activites{
-    margin-left: 21px;
+  .view-mobile{
+    display: flex ;
   }
-  footer{
+  .pied-page{
     flex-direction: column;
+    max-height: none;
+    padding-left: 10px;
+  }
+  .colone{
+    width: 100%;
   }
 }
