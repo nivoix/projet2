@@ -9,13 +9,13 @@ body{/* cadrage de la page*/
   max-width: 1400px;
   padding-inline: 40px;
 }
-.entete{
+.entete{/* parametre du header*/
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   align-content: space-between;  
 }
-.navig{ /* positionnement du header*/
+.navig{ /* parametre du haut de page navigation*/
   display: flex;
   width: 100%;
   height: 100px;
@@ -45,7 +45,7 @@ img{ /* taille du logo*/
   justify-content: space-around;
   border-top: 3px solid transparent;
 }
-.liennav {
+.liennav {/* parametre du lien*/
   color: inherit;
   text-decoration: none;
 }
@@ -54,9 +54,9 @@ img{ /* taille du logo*/
   color: #0065FC;
   cursor: pointer;
 }
-h1{
+h1{/* parametre du titre*/
   font-size: 22px;
-  line-height: 25.83px;
+  line-height: 26px;
 }
 .search{ /* container barre de recherche*/
   display: flex;
@@ -101,10 +101,10 @@ form{ /* paramètre du bloc de saisie ville*/
   color: white;
   padding-inline: 4%;
 }
-.button:hover{
+.button:hover{/* parametre du survol*/
   cursor: pointer;
 }
-i.loupe{/*bouton de la barre de recherche*/
+i.loupe{/*bouton de la barre de recherche loupe*/
   width: 50px;
   border-radius: 12px;
   background-color: #0065FC;
@@ -117,7 +117,7 @@ i.loupe{/*bouton de la barre de recherche*/
   align-items: center;
   display: none;
 }
-.filtres{
+.filtres{/* parametre du bloc filtre*/
   display: flex;
   height: auto;
   flex-direction: row;
@@ -133,12 +133,12 @@ i.loupe{/*bouton de la barre de recherche*/
   margin-bottom: 10px;
   font-weight: 900;
 }
-.logo{
+.logo{/* parametre des image des filtres*/
   color: #0065fc;
   background-color:transparent;
   padding-right: 10px;
 }
-.bulle{
+.bulle{/* parametre de la bulle des filtres*/
   display: flex;
   height: 50px;
   border: 3px solid #F2F2F2;
@@ -146,15 +146,15 @@ i.loupe{/*bouton de la barre de recherche*/
   border-radius: 45px;
   width: auto;
 }
-.bulle:hover{
+.bulle:hover{/* parametre du survol des bulles*/
   background-color: #DEEBFF;
   cursor: pointer;
 }
-.nomfiltre{
+.nomfiltre{/* parametre du nom des filtres*/
   height: 10px;
   font-weight: 400;
 }
-.info{
+.info{/* parametre du texte info*/
   display: flex;
   align-items: baseline;
   margin-top: 15px;
@@ -163,7 +163,7 @@ i.loupe{/*bouton de la barre de recherche*/
   justify-content: flex-start;
   width: 95%;
 }
-i.logi{
+i.logi{/* parametre du logo info*/
   color: #0065fc;
   align-items: center;
   justify-content: center;
@@ -175,7 +175,7 @@ i.logi{
     height: 35px;
     width: 35px; 
 }
-.bloccard{
+.bloccard{/* parametre du bloc contenant hebergements et populaires*/
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -199,14 +199,14 @@ i.logi{
   flex-wrap: wrap;
   height: 67%;
 }
-.bloc-heberg h2 {
+.bloc-heberg h2 {/* parametre du titre du bloc heberg*/
   font-weight: 900;
   font-size: 22px;
-  line-height: 25.83px;
+  line-height: 26px;
   margin: 0;
   padding-left: 40px;
 }
-.liencard{
+.liencard{/* parametre du lien des card*/
   color: inherit;
   text-decoration: none;
   width: 30%;
@@ -218,7 +218,7 @@ i.logi{
   height: 199px;
   background-color: white;
   border-radius: 20px;
-  box-shadow: 2px 2px 15px 5px #bbb9b9;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
   transition: all 400ms;
 }
 .image-container{ /* cadre photo*/
@@ -241,11 +241,15 @@ i.logi{
   justify-content: space-between;
   padding-top: 4px;
 }
-.card-body-heberg h4, .card-body-heberg p, .card-etoile-heberg{
+.card-body-heberg h4, .card-body-heberg p, .card-etoile-heberg{/* parametre des renseignements*/
   margin: 0;
   padding-left: 16px;
 }
-.lien{
+.card-body-heberg h4{/* parametre du titre des renseignements*/
+  font-weight: 900;
+  font-size: 16px;
+}
+.lien{/* parametre du lien en fin de bloc hebergement*/
   margin-top: 0;
   margin-bottom: 0;
   padding-top: 28px;
@@ -253,7 +257,7 @@ i.logi{
   font-weight: 900;
   cursor: pointer;
 }
-.lien a:hover{
+.lien a:hover{/* parametre du lien en survol*/
   color: #0065fc;
 }
 .bloc-populaires{ /* bloc gris populaires*/
@@ -270,25 +274,26 @@ i.logi{
   flex-direction: column;
   justify-content: space-around;
 }
-.bloc-populaires h2{
+.bloc-populaires h2{/* parametre du titre du bloc populaires*/
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-weight: 900;
   font-size: 22px;
-  line-height: 25.83px;
+  line-height: 26px;
   margin: 0;
   padding-top: 37px;
   padding-bottom: 12px;
   padding-left: 27px;
   padding-right: 37px;
 }
-.bloc-populaires h2 img{
+.bloc-populaires h2 img{/* parametre du logo à coté du titre populaire*/
   color: #0065fc;
   width: 35px;
   height: 20px;
 }
-.liencardpop{
+.liencardpop{/* parametre du lien des card populaires*/
+  color: inherit;
   text-decoration: none;
 }
 .card-soleil-matin{ /* une card*/
@@ -300,7 +305,7 @@ i.logi{
   background-color: white;
   border-radius: 20px;
   position: relative;
-  box-shadow: 2px 2px 15px 5px #bbb9b9;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
   transition: all 400ms;
 }
 .card-image-pop{ /* cadre photo*/
@@ -320,19 +325,24 @@ i.logi{
   height: 100%;
   display: flex;
   flex-direction: column;
+  gap: 2%;
 }
-.card-body-pop h4, .card-body-pop p, .card-etoile-pop{
+.card-body-pop h4, .card-body-pop p, .card-etoile-pop{/* parametre des renseignement*/
   margin: 0;
   padding-left: 15px;
   flex-wrap: wrap;
 }
-.card-body-pop h4{
+.card-body-pop h4{/* parametre du titre des renseignements*/
   margin-top: 10px;
   margin-bottom: 7px;
-  font-weight: 900;
+  font-weight: 700;
   font-size: 16px;
 }
-.card-etoile-pop{
+.card-body-pop p{/* parametre du prix des renseignements*/
+  font-size: 14px;
+  line-height: 16px;
+}
+.card-etoile-pop{/* parametre des étoiles */
   margin-top: auto;
   margin-bottom: 12px;
 }
@@ -348,14 +358,14 @@ span i.fa-solid{
   color: #DEEBFF;
   font-size: 12px;
 }
-.card-cannebiere:hover, .card-soleil-matin:hover, .card-vieuxport:hover{
+.card-cannebiere:hover, .card-soleil-matin:hover, .card-vieuxport:hover{/* parametre de l'effet du survol des card*/
   transform:scale(1.07);
   cursor: pointer;
 }
-.zactivites h2{
+.zactivites h2{/* parametre du titre activités*/
   padding-top: 20px;
   font-size: 22px;
-  line-height: 25.83px;
+  line-height: 26px;
   font-weight: 900;
 }
 .bloc-activites{/*bloc gris activités*/
@@ -373,12 +383,13 @@ span i.fa-solid{
   border-radius: 20px;
   height: 100%;
   width: 100%;
-  box-shadow: 2px 2px 5px 5px #F2F2F2;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
   transition: transform 400ms;
 }
-.liencardactiv{
+.liencardactiv{/* parametre du lien*/
   width: 23%;
   text-decoration: none;
+  color: inherit;
 }
 .image-container-activ{ /* cadre photo*/
   width: 100%;
@@ -399,10 +410,14 @@ span i.fa-solid{
   background-color: white;
   border-radius: 0 0 20px 20px;
 }
-.view-mobile{
+.card-body-activ h4{/* parametre du titre*/
+  font-weight: 900;
+  font-size: 16px;
+}
+.view-mobile{/*card visible uniquement en mobile*/
   display: none;
 }
-.pied-page{
+.pied-page{/* parametre du pied de page*/
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -410,20 +425,20 @@ span i.fa-solid{
   width: 100%;
   max-height: 225px;
 }
-.colone{
+.colone{/* parametre des 3 colones*/
   width: 33%;
 }
-.titrepiedpage{
+.titrepiedpage{/* parametre des titres des colones*/
   height: 21px;
   font-size: 18px;
   font-weight: 900;
   margin-bottom: 10px;
   list-style: none;
 }
-.lienpiedpage{
+.lienpiedpage{/* parametre du lien*/
   list-style: none;
 }
-.lienpiedpage:hover{
+.lienpiedpage:hover{/* parametre du header*/
   cursor: pointer;
   color: #0065fc;
 }
@@ -469,7 +484,7 @@ span i.fa-solid{
     min-width: 45%;
   }
   .card-body-pop h4{
-    margin-top: 7px;
+    margin-top: 12px;
   }
   .card-body-pop h4, .card-body-pop p, .card-etoile-pop{
     padding-left: 2%;
@@ -482,7 +497,10 @@ span i.fa-solid{
   padding-inline: 0;
   }
   .titre, .search, .filtres, .info{
-  margin-left: 4px;
+  margin-left: 14px;
+  }
+  .search, .bulle{
+    margin-inline: auto;
   }
   .choixselect:hover{
     border-top:none;
@@ -530,7 +548,7 @@ span i.fa-solid{
     height: auto;
   }
   .bloc-heberg h2{
-    padding-left: 10px;
+    padding-left: 20px;
     padding-top: 25px;
     padding-bottom: 15px;
   }
@@ -545,7 +563,7 @@ span i.fa-solid{
     flex-direction: column;
     height: auto;
     width: 92%;
-    margin-inline: 2%;
+    margin-inline: auto;
   }
   .liencard{
     width: 100%;
@@ -553,7 +571,8 @@ span i.fa-solid{
   }
   .cardpop{
     flex-direction: column;
-    margin-inline: 10px;
+    margin-inline: auto;
+    width: 92%;
   }
   .liencardpop{
     width: 100%;
@@ -561,11 +580,18 @@ span i.fa-solid{
   }
   .card-soleil-matin{
     margin-bottom: 11px;
-    width: 96%;
+    width: 100%;
+  }
+  .card-body-pop{
+    gap: 10%;
+  }
+  .zactivites h2{
+    padding-left: 20px;
   }
   .bloc-activites{
     flex-direction: column;
     width: 92%;
+    margin-inline: auto;
   }
   .liencardactiv{
     width: 100%;
@@ -574,7 +600,6 @@ span i.fa-solid{
     width: 100%;
     max-height: 190px;
     margin-top: 24px;
-    margin-inline: 2%;
   }
   .image-container-activ{
     max-height: 70%;
