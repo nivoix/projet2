@@ -6,6 +6,7 @@
 }
 body{/* cadrage de la page*/
   margin-top: 0px;
+  margin-inline: auto;
   max-width: 1400px;
   padding-inline: 40px;
 }
@@ -153,6 +154,7 @@ i.loupe{/*bouton de la barre de recherche loupe*/
 .nomfiltre{/* parametre du nom des filtres*/
   height: 10px;
   font-weight: 400;
+  margin-inline: auto;
 }
 .info{/* parametre du texte info*/
   display: flex;
@@ -545,7 +547,8 @@ span i.fa-solid{
     margin-left: 0%;
   }
   .bulle{
-    width: 169px;
+    width: 49%;
+    min-width: 169px;
     padding: 14px 5px 6px 5px;
   }
   .filtres{
