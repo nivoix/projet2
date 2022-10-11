@@ -502,6 +502,9 @@ span i.fa-solid{
   .card-body-pop h4, .card-body-pop p, .card-etoile-pop{
     padding-left: 2%;
   }
+  .card-body-activ h4{/* parametre du titre*/
+    padding-top: 0;
+  }
 } 
               /*MOBILES*/
 @media screen and (max-width: 767px) {
