@@ -456,14 +456,6 @@ span i.fa-solid{
 }
          /* TABLETTES*/
 @media screen and (max-width: 991px) {
-  .button{
-    display: none;
-  }
-  I.loupe{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
   .filtres{
     width: 100%;
     gap: 1%;
@@ -511,6 +503,15 @@ span i.fa-solid{
   body{
   margin: 0;
   padding-inline: 0;
+  }
+  .button{
+    display: none;
+  }
+  I.loupe{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 12px 12px 0;
   }
   .titre, .search, .filtres, .info{
   margin-left: 14px;
